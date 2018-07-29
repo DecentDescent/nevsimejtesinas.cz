@@ -6,10 +6,8 @@ import Comp1 from "../components/Comp1";
 import Comp2 from "../components/Comp2";
 
 export default () => (
-  <div>
-    <Head>
-      <link rel="stylesheet" href="/_next/static/style.css" />
-    </Head>
+  <div className="index">
+    <Head />
     <Nav />
     <div>Hello</div>
     <Comp1 />

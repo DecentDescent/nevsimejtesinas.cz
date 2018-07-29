@@ -5,13 +5,13 @@ import Comp2 from "../components/Comp2";
 
 export default () => (
   <div>
-    <Head>
-      <link rel="stylesheet" href="/_next/static/style.css" />
-    </Head>
+    <Head title="Page 2" />
     <Comp2 />
     <Link href="/index">
-      <a>here</a>
+      <a>BACK</a>
     </Link>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=page2">SHARE</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://dist-vvyimvmjvb.now.sh/page2">
+      SHARE
+    </a>
   </div>
 );
