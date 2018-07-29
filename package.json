@@ -1,0 +1,31 @@
+{
+  "name": "dist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@zeit/next-sass": "^0.2.0",
+    "next": "^6.1.1",
+    "node-sass": "^4.9.2",
+    "prettier": "^1.14.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DecentDescent/nevsimejtesinas.cz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DecentDescent/nevsimejtesinas.cz/issues"
+  },
+  "homepage": "https://github.com/DecentDescent/nevsimejtesinas.cz#readme"
+}
