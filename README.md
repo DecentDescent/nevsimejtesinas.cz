@@ -1,0 +1,1 @@
+# nevsimejtesinas.cz
