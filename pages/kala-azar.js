@@ -15,7 +15,7 @@ export default class extends SmartPage {
           description="Říkají mi „černá horečka“, což v hindštině znamená ono tajemné kala azar. Ale pozor, geograficky nepatřím mezi vybíravé. Najdete mne ve více než sedmdesáti zemích, nejraději mám Indii, Bangladéš, Etiopii či Brazílii. Ročně mí služebníci – muchničky – nakazí statisíce lidí leishmaniózou."
           ogTitle="Kala Azar - Nevšímejte si nás! - Lékaři bez hranic"
           ogDescription="Říkají mi „černá horečka“, což v hindštině znamená ono tajemné kala azar. Ale pozor, geograficky nepatřím mezi vybíravé. Najdete mne ve více než sedmdesáti zemích, nejraději mám Indii, Bangladéš, Etiopii či Brazílii. Ročně mí služebníci – muchničky – nakazí statisíce lidí leishmaniózou."
-          ogImage="https://www.w3schools.com/w3css/img_lights.jpg"
+          ogImage={myUrl + "/static/img/og/kala-azar.jpg"}
         />
         <Header />
         <Disease

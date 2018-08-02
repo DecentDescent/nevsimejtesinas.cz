@@ -4,7 +4,7 @@ import Head from "next/head";
 export default ({ title, description }) => (
   <Head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title || "Nevšímejte si nás!"} | Lékaři bez hranic</title>
+    <title>{title || "Nevšímejte si nás! - Lékaři bez hranic"}</title>
     <meta
       name="description"
       content={
@@ -13,19 +13,8 @@ export default ({ title, description }) => (
       }
     />
     <meta
-      property="og:url"
-      content="https://www.phpied.com/files/mvsmt/mvsmt.html"
-    />
-    <meta
-      property="og:image"
-      content="https://www.phpied.com/files/mvsmt/gloria.png"
-    />
-    <meta
       property="og:title"
-      content={
-        title + " | Lékaři bez hranic" ||
-        "Nevšímejte si nás! | Lékaři bez hranic"
-      }
+      content={title || "Nevšímejte si nás! - Lékaři bez hranic"}
     />
     <meta
       property="og:description"
@@ -35,6 +24,8 @@ export default ({ title, description }) => (
       }
     />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="og:url" content="https://www.lekari-bez-hranic.cz" />
+    <meta name="og:image" content="/static/img/og/og-main.jpg" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
