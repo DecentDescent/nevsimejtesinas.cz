@@ -1,11 +1,243 @@
-@import "topMenu";
-@import "layoutPublic";
-@import "form";
-@import "lab";
-.index {
-  #page1,
-  #page2,
-  #page3 {
-    height: 1000px;
+$color-white: #fff;
+$color-text: #222;
+$color-brand: #ee0000;
+
+@font-face {
+  font-family: "NudistaFont";
+  src: url("/static/fonts/nudista_medium.woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "NudistaFont";
+  src: url("/static/fonts/nudista_bold.woff");
+  font-weight: 700;
+}
+
+body {
+  margin: 0;
+  font-family: "NudistaFont";
+}
+
+h2 {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 60ch;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  box-sizing: border-box;
+
+  &#intro {
+    background: #000;
+    color: $color-white;
+  }
+
+  .section__left {
+    width: 50%;
+    height: 100vh;
+    cursor: pointer;
+  }
+
+  .section__right {
+    width: 50%;
+    .container {
+      max-width: 50ch;
+      padding: 20px;
+      box-sizing: border-box;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+svg.msflogo {
+  width: auto;
+  height: 44px;
+
+  @media (max-width: 980px) {
+    height: 32px;
+  }
+}
+
+// BUTTONS
+.btn {
+  padding: 10px 15px;
+  border: 2px solid blue;
+  border-radius: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+// PRELOADER
+#preloader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  z-index: 999;
+}
+
+// HEADER
+.header {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  background: $color-white;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 998;
+
+  .header__logo {
+    a {
+      cursor: pointer;
+      display: block;
+    }
+  }
+
+  .header__title {
+  }
+
+  .header__navitems {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    a {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      margin-left: 2px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #eceff1;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: #cfd8dc;
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+        fill: #37474f;
+      }
+    }
+
+    a.navitem-share {
+      display: flex;
+    }
+
+    a.navitem-nav {
+      display: flex;
+    }
+
+    a.navitem-close {
+      display: none;
+    }
+  }
+
+  &.navigation--active {
+    a.navitem-share {
+      display: none;
+    }
+
+    a.navitem-nav {
+      display: none;
+    }
+
+    a.navitem-close {
+      display: flex;
+    }
+  }
+}
+
+// NAVIGATION
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 997;
+  top: 0;
+  left: -100%;
+  background: $color-white;
+  overflow: auto;
+  transition: left 0.5s;
+
+  &.navigation--active {
+    display: flex;
+    left: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    li {
+      font-size: 28px;
+      text-transform: uppercase;
+      margin: 15px 0;
+      @media (max-width: 640px) {
+        font-size: 24px;
+        margin: 8px 0;
+      }
+      @media (max-width: 480px) {
+        font-size: 21px;
+        margin: 8px 0;
+      }
+      &:not(:last-child):after {
+        content: "";
+        width: 25%;
+        height: 1px;
+        margin: 0 auto;
+        display: block;
+        border-bottom: 1px #d4d4d4 solid;
+      }
+      a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: $color-text;
+        transition: color 0.3s;
+        &:hover {
+          color: $color-brand;
+        }
+      }
+    }
   }
 }
