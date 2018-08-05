@@ -15,7 +15,7 @@ export default class extends SmartPage {
           description="Oficiálně možná nepatřím do spolku opomíjených nemocí, ale místo zde mi upřít nelze. Svět na mě skoro zapomněl, už ho neděsím jako dřív. Myslí si o mně, že jsem chorobou minulosti. Víc by se však mýlit nemohli. Jsem nejsmrtelnější infekcí na světě. V počtu obětí předčím HIV/AIDS. Ročně rozevřu náruč deseti milionům lidí, skoro dva miliony pošlu na onen svět."
           ogTitle="Tuberkulóza - Nevšímejte si nás! - Lékaři bez hranic"
           ogDescription="Oficiálně možná nepatřím do spolku opomíjených nemocí, ale místo zde mi upřít nelze. Svět na mě skoro zapomněl, už ho neděsím jako dřív. Myslí si o mně, že jsem chorobou minulosti. Víc by se však mýlit nemohli. Jsem nejsmrtelnější infekcí na světě. V počtu obětí předčím HIV/AIDS. Ročně rozevřu náruč deseti milionům lidí, skoro dva miliony pošlu na onen svět."
-          ogImage={myUrl + "/static/img/og/spava-nemoc.jpg"}
+          ogImage={myUrl + "/static/img/og/tuberkuloza.jpg"}
         />
         <Header />
         <Disease

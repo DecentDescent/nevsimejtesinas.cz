@@ -35,6 +35,8 @@ p {
   max-width: 60ch;
   width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .section {
@@ -46,28 +48,53 @@ p {
   min-height: 100vh;
   height: auto;
   box-sizing: border-box;
-
+  &.left {
+    flex-direction: row;
+  }
+  &.right {
+    flex-direction: row-reverse;
+  }
   &#intro {
     background: #000;
     color: $color-white;
   }
 
   .section__left {
+    display: flex;
     width: 50%;
     height: 100vh;
-    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    img {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+    }
+    &:hover {
+      filter: grayscale(0%);
+    }
   }
 
   .section__right {
+    padding: 0 20px;
+    box-sizing: border-box;
     width: 50%;
     .container {
-      max-width: 50ch;
-      padding: 20px;
-      box-sizing: border-box;
-      width: 100%;
-      margin: 0 auto;
+      max-width: 40ch;
     }
   }
+}
+
+.container {
+  max-width: 70ch;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
 }
 
 svg.msflogo {
@@ -105,7 +132,6 @@ svg.msflogo {
   width: 100%;
   display: flex;
   position: fixed;
-  background: $color-white;
   padding: 10px 15px;
   box-sizing: border-box;
   justify-content: space-between;
@@ -179,7 +205,6 @@ svg.msflogo {
 }
 
 // NAVIGATION
-
 .navigation {
   display: flex;
   align-items: center;
@@ -240,4 +265,40 @@ svg.msflogo {
       }
     }
   }
+}
+
+// SECTION BACKGROUNDS
+#hero {
+  background-image: url("/static/img/bg-hero.jpg");
+  background-position: right top;
+  background-size: cover;
+}
+#kala-azar {
+  background-image: url("/static/img/bg-kala-azar.jpg");
+  background-position: left top;
+  background-size: cover;
+}
+
+#chogasova-choroba {
+  background-image: url("/static/img/bg-chogasova-choroba.jpg");
+  background-position: right top;
+  background-size: cover;
+}
+
+#hadi-ustknuti {
+  background-image: url("/static/img/bg-hadi-ustknuti.jpg");
+  background-position: left top;
+  background-size: cover;
+}
+
+#tuberkuloza {
+  background-image: url("/static/img/bg-tuberkuloza.jpg");
+  background-position: right top;
+  background-size: cover;
+}
+
+#spava-nemoc {
+  background-image: url("/static/img/bg-spava-nemoc.jpg");
+  background-position: left top;
+  background-size: cover;
 }

@@ -62,37 +62,37 @@ export default class Header extends React.Component {
         >
           <ul>
             <li>
-              <a href="#nevsimejte-si-nas" onClick={this.toggleNavigation}>
+              <a href="index#nevsimejte-si-nas" onClick={this.toggleNavigation}>
                 Nevšímejte si nás!
               </a>
             </li>
             <li>
-              <a href="#kala-azar" onClick={this.toggleNavigation}>
+              <a href="index#kala-azar" onClick={this.toggleNavigation}>
                 Kala Azar
               </a>
             </li>
             <li>
-              <a href="#chogasova-choroba" onClick={this.toggleNavigation}>
+              <a href="index#chogasova-choroba" onClick={this.toggleNavigation}>
                 Chogasova choroba
               </a>
             </li>
             <li>
-              <a href="#hadi-usktnuti" onClick={this.toggleNavigation}>
+              <a href="index#hadi-ustknuti" onClick={this.toggleNavigation}>
                 Hadí ušktnutí
               </a>
             </li>
             <li>
-              <a href="#tuberkuloza" onClick={this.toggleNavigation}>
+              <a href="index#tuberkuloza" onClick={this.toggleNavigation}>
                 Tuberkulóza
               </a>
             </li>
             <li>
-              <a href="#spava-nemoc" onClick={this.toggleNavigation}>
+              <a href="index#spava-nemoc" onClick={this.toggleNavigation}>
                 Spavá nemoc
               </a>
             </li>
             <li>
-              <a href="#o-projektu" onClick={this.toggleNavigation}>
+              <a href="index#o-projektu" onClick={this.toggleNavigation}>
                 O projektu
               </a>
             </li>

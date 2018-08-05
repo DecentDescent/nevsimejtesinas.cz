@@ -1,5 +1,5 @@
 export default ({ ...props }) => (
-  <section id={props.name} className="section">
+  <section id={props.name} className={"section " + props.type}>
     <div className="section__left" />
     <div className="section__right">
       <div className="container">

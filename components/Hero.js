@@ -1,5 +1,8 @@
 export default () => (
   <section id="hero" className="section">
-    Hero
+    <div className="section__left">
+      <img src="static/img/headline.png" />
+    </div>
+    <div className="section__right" />
   </section>
 );

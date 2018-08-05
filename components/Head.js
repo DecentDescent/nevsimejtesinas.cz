@@ -1,7 +1,7 @@
 import "../styles/styles.scss";
 import Head from "next/head";
 
-export default ({ title, description }) => (
+export default ({ title, description, ogImage }) => (
   <Head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title || "Nevšímejte si nás! - Lékaři bez hranic"}</title>
@@ -25,7 +25,7 @@ export default ({ title, description }) => (
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="og:url" content="https://www.lekari-bez-hranic.cz" />
-    <meta name="og:image" content="/static/img/og/og-main.jpg" />
+    <meta name="og:image" content={ogImage || "/static/img/og/og-main.jpg"} />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
