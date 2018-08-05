@@ -17,6 +17,7 @@ $color-brand: #ee0000;
 body {
   margin: 0;
   font-family: "NudistaFont";
+  overflow: hidden;
 }
 
 h2 {
@@ -69,13 +70,12 @@ p {
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
+    .btn {
+    }
     img {
       max-width: 500px;
       width: 100%;
       height: auto;
-    }
-    &:hover {
-      filter: grayscale(0%);
     }
   }
 
@@ -109,10 +109,21 @@ svg.msflogo {
 // BUTTONS
 .btn {
   padding: 10px 15px;
-  border: 2px solid blue;
-  border-radius: 2px;
+  border: 2px solid $color-white;
+  background: #dcdcdc;
+  color: $color-text;
+  border-radius: 3px;
+  text-decoration: none;
   text-transform: uppercase;
   text-decoration: none;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-brand;
+    border: 2px solid $color-brand;
+    color: $color-white;
+  }
 }
 
 // PRELOADER
@@ -173,6 +184,9 @@ svg.msflogo {
         width: 16px;
         height: 16px;
         fill: #37474f;
+        .text {
+          fill: #000;
+        }
       }
     }
 
@@ -268,6 +282,10 @@ svg.msflogo {
 }
 
 // SECTION BACKGROUNDS
+#nevsimejte-si-nas {
+  background: #000;
+  color: #fff;
+}
 #hero {
   background-image: url("/static/img/bg-hero.jpg");
   background-position: right top;
@@ -277,28 +295,84 @@ svg.msflogo {
   background-image: url("/static/img/bg-kala-azar.jpg");
   background-position: left top;
   background-size: cover;
+  filter: grayscale(100%);
 }
 
 #chogasova-choroba {
   background-image: url("/static/img/bg-chogasova-choroba.jpg");
   background-position: right top;
   background-size: cover;
+  filter: grayscale(100%);
 }
 
 #hadi-ustknuti {
   background-image: url("/static/img/bg-hadi-ustknuti.jpg");
   background-position: left top;
   background-size: cover;
+  filter: grayscale(100%);
 }
 
 #tuberkuloza {
   background-image: url("/static/img/bg-tuberkuloza.jpg");
   background-position: right top;
   background-size: cover;
+  filter: grayscale(100%);
 }
 
 #spava-nemoc {
   background-image: url("/static/img/bg-spava-nemoc.jpg");
   background-position: left top;
   background-size: cover;
+  filter: grayscale(100%);
+}
+
+section:hover {
+  filter: grayscale(0) !important;
+}
+.particles {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.full-page-controls {
+  position: fixed;
+  right: 10px;
+  z-index: 999;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  button {
+    &:first-child,
+    &:last-child {
+      display: none;
+    }
+    width: 8px;
+    height: 8px;
+    margin: 5px 0;
+    padding: 0;
+    background: rgb(71, 71, 71);
+    color: rgb(71, 71, 71);
+    font-size: 1px;
+    border-radius: 50%;
+    display: block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    opacity: 0.5;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:disabled {
+      width: 12px;
+      height: 12px;
+      opacity: 1;
+    }
+  }
 }

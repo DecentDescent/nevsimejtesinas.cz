@@ -29,27 +29,27 @@ export default ({ title, description, ogImage }) => (
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="https://www.lekari-bez-hranic.cz//sites/master/files/favicons/apple-touch-icon.png"
+      href="https://www.lekari-bez-hranic.cz/sites/master/files/favicons/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="https://www.lekari-bez-hranic.cz//sites/master/files/favicons/favicon-32x32.png"
+      href="https://www.lekari-bez-hranic.cz/sites/master/files/favicons/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="https://www.lekari-bez-hranic.cz//sites/master/files/favicons/favicon-16x16.png"
+      href="https://www.lekari-bez-hranic.cz/sites/master/files/favicons/favicon-16x16.png"
     />
     <link
       rel="manifest"
-      href="https://www.lekari-bez-hranic.cz//sites/master/files/favicons/manifest.json"
+      href="https://www.lekari-bez-hranic.cz/sites/master/files/favicons/manifest.json"
     />
     <link
       rel="mask-icon"
-      href="https://www.lekari-bez-hranic.cz//sites/master/files/favicons/safari-pinned-tab.svg"
+      href="https://www.lekari-bez-hranic.cz/sites/master/files/favicons/safari-pinned-tab.svg"
       color="#5bbad5"
     />
     <meta name="theme-color" content="#ffffff" />
