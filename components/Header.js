@@ -2,21 +2,55 @@ export default class Header extends React.Component {
   constructor() {
     super();
     this.state = { isNavOn: false };
-    this.toggleNavigation = this.toggleNavigation.bind(this);
+    this.state = { isSharingOn: false };
+    this.state = { closeOn: false };
+
+    this.openNavigation = this.openNavigation.bind(this);
+    this.openSharing = this.openSharing.bind(this);
+    this.closeAll = this.closeAll.bind(this);
   }
 
-  toggleNavigation() {
-    this.setState(prevState => ({
-      isNavOn: !prevState.isNavOn
+  openNavigation() {
+    this.setState(() => ({
+      isNavOn: true,
+      closeOn: true
     }));
   }
 
+  openSharing() {
+    this.setState(() => ({
+      isSharingOn: true,
+      closeOn: true
+    }));
+  }
+
+  closeAll() {
+    this.setState(() => ({
+      isNavOn: false,
+      isSharingOn: false,
+      closeOn: false
+    }));
+  }
+
+  keyHandling(e) {
+    if (e.keyCode === 27) {
+      console.log("Annd.... what now?");
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener("keyup", this.keyHandling);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("keyup", this.keyHandling);
+  }
   render() {
     return (
       <div>
         <header
           className={
-            this.state.isNavOn ? "header navigation--active" : "header"
+            this.state.closeOn ? "header header--navmodal-opened" : "header"
           }
         >
           <div className="header__logo">
@@ -43,17 +77,17 @@ export default class Header extends React.Component {
             </a>
           </div>
           <div className="header__navitems">
-            <a className="navitem-share">
+            <a onClick={this.openSharing} className="navitem-share">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" />
               </svg>
             </a>
-            <a onClick={this.toggleNavigation} className="navitem-nav">
+            <a onClick={this.openNavigation} className="navitem-nav">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
               </svg>
             </a>
-            <a onClick={this.toggleNavigation} className="navitem-close">
+            <a onClick={this.closeAll} className="navitem-close">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
               </svg>
@@ -62,44 +96,72 @@ export default class Header extends React.Component {
         </header>
         <section
           className={
-            this.state.isNavOn ? "navigation navigation--active" : "navigation"
+            this.state.isNavOn
+              ? "navmodal navmodal--navigation navmodal--active"
+              : "navmodal navmodal--navigation"
           }
           role="navigation"
         >
           <ul>
             <li>
-              <a href="index#nevsimejte-si-nas" onClick={this.toggleNavigation}>
+              <a href="index#nevsimejte-si-nas" onClick={this.closeAll}>
                 Nevšímejte si nás!
               </a>
             </li>
             <li>
-              <a href="index#kala-azar" onClick={this.toggleNavigation}>
+              <a href="index#kala-azar" onClick={this.closeAll}>
                 Kala Azar
               </a>
             </li>
             <li>
-              <a href="index#chogasova-choroba" onClick={this.toggleNavigation}>
+              <a href="index#chogasova-choroba" onClick={this.closeAll}>
                 Chogasova choroba
               </a>
             </li>
             <li>
-              <a href="index#hadi-ustknuti" onClick={this.toggleNavigation}>
+              <a href="index#hadi-ustknuti" onClick={this.closeAll}>
                 Hadí ušktnutí
               </a>
             </li>
             <li>
-              <a href="index#tuberkuloza" onClick={this.toggleNavigation}>
+              <a href="index#tuberkuloza" onClick={this.closeAll}>
                 Tuberkulóza
               </a>
             </li>
             <li>
-              <a href="index#spava-nemoc" onClick={this.toggleNavigation}>
+              <a href="index#spava-nemoc" onClick={this.closeAll}>
                 Spavá nemoc
               </a>
             </li>
             <li>
-              <a href="index#o-projektu" onClick={this.toggleNavigation}>
+              <a href="index#o-projektu" onClick={this.closeAll}>
                 O projektu
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section
+          className={
+            this.state.isSharingOn
+              ? "navmodal navmodal--sharing navmodal--active"
+              : "navmodal navmodal--sharing"
+          }
+          role="navigation"
+        >
+          <ul>
+            <li>
+              <a href="index#nevsimejte-si-nas" onClick={this.closeAll}>
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a href="index#kala-azar" onClick={this.closeAll}>
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a href="index#kala-azar" onClick={this.closeAll}>
+                E-Mail
               </a>
             </li>
           </ul>
