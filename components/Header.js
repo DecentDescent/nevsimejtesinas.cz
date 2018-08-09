@@ -15,6 +15,7 @@ export default class Header extends React.Component {
       isNavOn: true,
       closeOn: true
     }));
+    document.body.classList.add("modal--active");
   }
 
   openSharing() {
@@ -22,6 +23,7 @@ export default class Header extends React.Component {
       isSharingOn: true,
       closeOn: true
     }));
+    document.body.classList.add("modal--active");
   }
 
   closeAll() {
@@ -30,6 +32,7 @@ export default class Header extends React.Component {
       isSharingOn: false,
       closeOn: false
     }));
+    document.body.classList.remove("modal--active");
   }
 
   keyHandling(e) {
@@ -45,10 +48,20 @@ export default class Header extends React.Component {
   componentWillUnmount() {
     window.removeEventListener("keyup", this.keyHandling);
   }
+  static async getInitialProps({ req }) {
+    const url =
+      req && req.headers && req.headers.host
+        ? "https://" + req.headers.host
+        : window.location.origin;
+    return { myUrl: url };
+  }
+
   render() {
+    const { myUrl } = this.props;
     return (
       <div>
         <header
+          id="header"
           className={
             this.state.closeOn ? "header header--navmodal-opened" : "header"
           }
@@ -138,6 +151,11 @@ export default class Header extends React.Component {
                 O projektu
               </a>
             </li>
+            <li>
+              <a href="index#casto-kladene-dotazy" onClick={this.closeAll}>
+                Často kladené dotazy
+              </a>
+            </li>
           </ul>
         </section>
         <section
@@ -150,17 +168,32 @@ export default class Header extends React.Component {
         >
           <ul>
             <li>
-              <a href="index#nevsimejte-si-nas" onClick={this.closeAll}>
+              <a
+                href={
+                  "https://www.facebook.com/sharer/sharer.php?u=http://www.nevsimejtesinas.cz"
+                }
+                onClick={this.closeAll}
+              >
                 Facebook
               </a>
             </li>
             <li>
-              <a href="index#kala-azar" onClick={this.closeAll}>
+              <a
+                href={
+                  "https://twitter.com/home?status=http%3A//www.nevsimejtesinas.cz"
+                }
+                onClick={this.closeAll}
+              >
                 Twitter
               </a>
             </li>
             <li>
-              <a href="index#kala-azar" onClick={this.closeAll}>
+              <a
+                href={
+                  "mailto:?&subject=Nevšímejte si nás! Kala Azar a spol.&body=Nav%C5%A1tivte%20str%C3%A1nky%20na%C5%A1eho%20nov%C3%A9ho%20projektu%20https%3A//www.nevsimejtesinas.cz"
+                }
+                onClick={this.closeAll}
+              >
                 E-Mail
               </a>
             </li>

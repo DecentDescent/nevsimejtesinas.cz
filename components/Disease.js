@@ -2,9 +2,6 @@ export default class Disease extends React.Component {
   render() {
     var VisibilitySensor = require("react-visibility-sensor");
 
-    var onChange = function(isVisible) {
-      const visibility = isVisible ? "visible" : "hidden";
-    };
     return (
       <VisibilitySensor
         partialVisibility={true}
@@ -14,13 +11,13 @@ export default class Disease extends React.Component {
           <section
             id={this.props.name}
             className={
-              "section" +
+              "section section--disease" +
               " " +
               (isVisible ? "section--visible" : "section--invisible")
             }
           >
             <div className="section__left">
-              <img src={"/static/img/bg-" + this.props.name + ".jpg"} />
+              <img src={"/static/img/img-" + this.props.name + ".jpg"} />
             </div>
             <div className="section__right">
               <div className="container container--narrow">
@@ -28,9 +25,11 @@ export default class Disease extends React.Component {
                 <p>{this.props.description}</p>
               </div>
               <div className="container container--narrow container--btn">
-                <a className="btn">Oslabit Nemoc</a>
+                <a className="btn" onClick={this.props.onClickHandler}>
+                  Oslabit Nemoc
+                </a>
               </div>
-            </div>
+            </div>{" "}
           </section>
         )}
       </VisibilitySensor>
