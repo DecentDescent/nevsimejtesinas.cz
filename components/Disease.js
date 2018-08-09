@@ -17,7 +17,7 @@ export default class Disease extends React.Component {
             }
           >
             <div className="section__left">
-              <img src={"/static/img/img-" + this.props.name + ".jpg"} />
+              {/* <img src={"/static/img/img-" + this.props.name + ".jpg"} /> */}
             </div>
             <div className="section__right">
               <div className="container container--narrow">

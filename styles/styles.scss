@@ -16,11 +16,11 @@ $color-brand: #ee0000;
 
 body {
   margin: 0;
-  background: #111;
   font-family: "NudistaFont";
   &.modal--active {
     overflow: hidden;
     .header {
+      transition: background 0.3s 0.3s;
       background: #fff;
     }
   }
@@ -85,11 +85,7 @@ p {
   margin: 0 auto;
 
   &.container--btn {
-    padding: 10px 20px;
-
-    @media (max-width: 850px) {
-      text-align: center;
-    }
+    padding: 10px 30px;
   }
   &.container--narrow {
     max-width: 50ch;
@@ -113,10 +109,12 @@ p {
   &.section--padding {
     padding: 65px 0;
   }
+
   .section__left {
     display: flex;
     width: 50%;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
@@ -127,10 +125,12 @@ p {
   .section__right {
     padding: 10px 20px;
     box-sizing: border-box;
+    min-height: 100vh;
+    height: auto;
     width: 50%;
     background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
   }
+
   &.section--footer {
     padding: 20px;
     height: auto;
@@ -177,6 +177,16 @@ p {
   }
 
   &.section--disease {
+    padding: 0;
+    .section__left {
+      height: auto;
+      min-height: auto;
+    }
+    .section__right {
+      padding: 68px 0;
+      height: unset;
+      min-height: auto;
+    }
     &:nth-of-type(odd) {
       flex-direction: row;
     }
@@ -186,11 +196,6 @@ p {
         align-items: flex-end;
       }
     }
-  }
-
-  img {
-    height: 100%;
-    width: auto;
   }
 }
 
@@ -222,6 +227,15 @@ svg.msflogo {
   align-items: center;
   z-index: 998;
   transition: background 0.3s;
+
+  &.header--light {
+    background: #fff;
+  }
+
+  &.header--dark {
+    background: #111;
+  }
+
   .header__logo {
     a {
       cursor: pointer;
@@ -235,8 +249,8 @@ svg.msflogo {
     justify-content: center;
 
     a {
-      width: 32px;
-      height: 32px;
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
       margin-left: 4px;
       display: inline-flex;
@@ -248,12 +262,12 @@ svg.msflogo {
 
       &:hover {
         background: #cfd8dc;
-        transform: scale(1.2);
+        transform: scale(1.1);
       }
 
       svg {
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
         fill: #37474f;
         .text {
           fill: #000;
@@ -384,8 +398,12 @@ svg.msflogo {
     background-image: url("/static/img/bg-hero.jpg");
     background-position: right center;
     background-size: cover;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     z-index: 1;
     animation: fadeInOut 30s infinite cubic-bezier(0.7, 0, 0.35, 1);
   }
@@ -440,30 +458,29 @@ svg.msflogo {
 }
 
 @media (max-width: 750px) {
+  #kala-azar,
+  #chogasova-choroba,
+  #hadi-ustknuti,
+  #tuberkuloza,
+  #spava-nemoc {
+    background-size: cover;
+    background-position: center 68px;
+    background-repeat: no-repeat;
+  }
   #kala-azar {
     background-image: url("/static/img/img-kala-azar-m.jpg");
-    background-size: cover;
-    background-position: top center;
   }
   #chogasova-choroba {
     background-image: url("/static/img/img-chogasova-choroba-m.jpg");
-    background-size: cover;
-    background-position: top center;
   }
   #hadi-ustknuti {
     background-image: url("/static/img/img-hadi-ustknuti-m.jpg");
-    background-size: cover;
-    background-position: top center;
   }
   #tuberkuloza {
     background-image: url("/static/img/img-tuberkuloza-m.jpg");
-    background-size: cover;
-    background-position: top center;
   }
   #spava-nemoc {
     background-image: url("/static/img/img-spava-nemoc-m.jpg");
-    background-size: cover;
-    background-position: top center;
   }
 }
 

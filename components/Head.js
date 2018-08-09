@@ -4,7 +4,9 @@ import Head from "next/head";
 export default ({ title, description, ogImage }) => (
   <Head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title || "Nevšímejte si nás! - Lékaři bez hranic"}</title>
+    <title>
+      {title || "Nevšímejte si nás! Kala Azar a spol. - Lékaři bez hranic"}
+    </title>
     <meta
       name="description"
       content={
@@ -14,7 +16,9 @@ export default ({ title, description, ogImage }) => (
     />
     <meta
       property="og:title"
-      content={title || "Nevšímejte si nás! - Lékaři bez hranic"}
+      content={
+        title || "Nevšímejte si nás! Kala Azar a spol. - Lékaři bez hranic"
+      }
     />
     <meta
       property="og:description"

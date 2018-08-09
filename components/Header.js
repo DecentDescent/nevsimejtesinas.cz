@@ -8,6 +8,7 @@ export default class Header extends React.Component {
     this.openNavigation = this.openNavigation.bind(this);
     this.openSharing = this.openSharing.bind(this);
     this.closeAll = this.closeAll.bind(this);
+    this.keyHandling = this.keyHandling.bind(this);
   }
 
   openNavigation() {
@@ -37,6 +38,7 @@ export default class Header extends React.Component {
 
   keyHandling(e) {
     if (e.keyCode === 27) {
+      this.closeAll();
       console.log("Annd.... what now?");
     }
   }
@@ -48,13 +50,6 @@ export default class Header extends React.Component {
   componentWillUnmount() {
     window.removeEventListener("keyup", this.keyHandling);
   }
-  static async getInitialProps({ req }) {
-    const url =
-      req && req.headers && req.headers.host
-        ? "https://" + req.headers.host
-        : window.location.origin;
-    return { myUrl: url };
-  }
 
   render() {
     const { myUrl } = this.props;
@@ -63,7 +58,9 @@ export default class Header extends React.Component {
         <header
           id="header"
           className={
-            this.state.closeOn ? "header header--navmodal-opened" : "header"
+            this.state.closeOn
+              ? "header header--navmodal-opened"
+              : "header header--light"
           }
         >
           <div className="header__logo">
