@@ -343,7 +343,8 @@ svg.msflogo {
     width: 100%;
     list-style: none;
     text-align: center;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     li {
       font-size: 24px;
       text-transform: uppercase;
