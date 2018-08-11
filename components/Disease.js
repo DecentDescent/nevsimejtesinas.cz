@@ -22,7 +22,15 @@ export default class Disease extends React.Component {
                 <p>{this.props.description}</p>
               </div>
               <div className="container container--narrow container--btn">
-                <a className="btn" onClick={this.props.onClickHandler}>
+                <a
+                  className="btn"
+                  onClick={() =>
+                    this.props.onShareClick(
+                      this.props.name,
+                      this.props.copyTitle
+                    )
+                  }
+                >
                   Oslabit Nemoc
                 </a>
               </div>
