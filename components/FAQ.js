@@ -182,6 +182,54 @@ export default class FAQ extends React.Component {
                   </AccordionItemBody>
                 </AccordionItem>
               </Accordion>
+            </div>
+
+            <div className="more-info">
+              Podrobnější informce o jednotlivých nemocech najdete zde:
+              <ul>
+                <li>
+                  <a
+                    href="https://www.lekari-bez-hranic.cz/en/node/1776"
+                    target="_blank"
+                  >
+                    Kala Azar
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.lekari-bez-hranic.cz/chagasova-choroba"
+                    target="_blank"
+                  >
+                    Chagasova choroba
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.lekari-bez-hranic.cz/hadi-ustknuti"
+                    target="_blank"
+                  >
+                    Hadí uštknutí
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.google.com/url?q=https://www.lekari-bez-hranic.cz/sk/node/1789&source=gmail&ust=1534023940687000&usg=AFQjCNHnn3b7uvJ4mmYlPJV7sfK48Nt7ww"
+                    target="_blank"
+                  >
+                    Tuberkulóza
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.lekari-bez-hranic.cz/spava-nemoc"
+                    target="_blank"
+                  >
+                    Spavá nemoc
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="container">
               <div className="donate">
                 <a
                   href="https://darujte.lekari-bez-hranic.cz/osoba/vyse-daru/0?_ga=2.180922595.514679042.1533986827-1440885372.1533497215&_gac=1.247260848.1533501640.EAIaIQobChMIoJjx3eLW3AIVQeaaCh35qwWqEAAYASAAEgIF-vD_BwE"

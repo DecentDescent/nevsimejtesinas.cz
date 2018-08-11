@@ -491,6 +491,39 @@ svg.msflogo {
 #casto-kladene-dotazy {
   flex-direction: column;
   padding-bottom: 0;
+  .more-info {
+    margin-top: 50px;
+    padding: 50px 20px 30px 20px;
+    text-align: center;
+    border-top: 1px #222 solid;
+    border-bottom: 1px #222 solid;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0 0;
+      li {
+        display: inline-block;
+        border-right: 1px #222 solid;
+        padding: 5px 10px;
+        &:last-child {
+          border-right: none;
+        }
+        a {
+          color: $color-white;
+          text-transform: uppercase;
+          display: block;
+          text-decoration: none;
+          transition: all 0.3s;
+          padding: 5px 10px;
+          border-radius: 3px;
+          &:hover {
+            background: $color-brand;
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
   footer {
     padding: 20px;
     height: auto;
@@ -546,6 +579,12 @@ svg.msflogo {
         }
       }
     }
+  }
+
+  .donate {
+    padding: 50px 20px;
+    color: $color-text;
+    text-align: center;
   }
 }
 
@@ -641,12 +680,4 @@ svg.msflogo {
       display: none;
     }
   }
-}
-
-.donate {
-  margin-top: 30px;
-  border-top: 1px #222 solid;
-  padding: 100px 20px 70px 20px;
-  color: $color-text;
-  text-align: center;
 }
