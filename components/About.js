@@ -16,7 +16,7 @@ export default class About extends React.Component {
             }
           >
             <div className="container">
-              <h2>Projekt Nevšímejte si nás. Kala Azar a spol.</h2>
+              <h2>Projekt Nevšímejte si nás! Kala Azar a spol.</h2>
               <p>
                 Zatímco čtete tento text, mimo zájem světa umírají lidé na
                 opomíjené nemoci, jako jsou spavá nemoc, kala azar, Chagasova

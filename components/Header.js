@@ -58,9 +58,7 @@ export default class Header extends React.Component {
         <header
           id="header"
           className={
-            this.state.closeOn
-              ? "header header--navmodal-opened"
-              : "header header--light"
+            this.state.closeOn ? "header header--navmodal-opened" : "header"
           }
         >
           <div className="header__logo">
@@ -124,13 +122,13 @@ export default class Header extends React.Component {
               </a>
             </li>
             <li>
-              <a href="index#chogasova-choroba" onClick={this.closeAll}>
-                Chogasova choroba
+              <a href="index#chagasova-choroba" onClick={this.closeAll}>
+                Chagasova choroba
               </a>
             </li>
             <li>
               <a href="index#hadi-ustknuti" onClick={this.closeAll}>
-                Hadí ušktnutí
+                Hadí uštknutí
               </a>
             </li>
             <li>

@@ -1,4 +1,5 @@
 import "../styles/styles.scss";
+import { FullPage, Slide } from "react-full-page";
 import Head from "../components/Head";
 import Preloader from "../components/Preloader";
 import Header from "../components/Header";
@@ -7,7 +8,6 @@ import Intro from "../components/Intro";
 import Disease from "../components/Disease";
 import About from "../components/About";
 import FAQ from "../components/FAQ";
-import Footer from "../components/Footer";
 
 export default class Index extends React.Component {
   render() {
@@ -25,9 +25,9 @@ export default class Index extends React.Component {
           description="Říkají mi „černá horečka“, což v hindštině znamená ono tajemné kala azar. Ale pozor, geograficky nepatřím mezi vybíravé. Najdete mne ve více než sedmdesáti zemích, nejraději mám Indii, Bangladéš, Etiopii či Brazílii. Ročně mí služebníci – muchničky – nakazí statisíce lidí leishmaniózou. A pokud přeroste do vážného stádia, přicházím já. Poznáte mne podle vředů v místě štípnutí, později napadám imunitní systém. Miluju útroby, hlavně játra a slezinu. Když se krmím, mí hostitelé hubnou, mívají anémii. Nejčastěji mě pokoušejí vyhnat léčbou, jíž kdosi vyvinul v 30. letech 20. století. Je dlouhá, bolestivá, toxická a drahá. Některým hostitelům se nedostane ani jí. Bez léčby většina lidí umírá. No, musím se pochlubit: po malárii jsem nejsmrtelnější parazitickou chorobou, ročně zabiju tisíce lidí."
         />
         <Disease
-          name="chogasova-choroba"
-          title="Chogasova choroba"
-          copy="Chogasovou chorobou"
+          name="chagasova-choroba"
+          title="chagasova choroba"
+          copy="Chagasovu chorobou"
           description="Můj čas přichází hlavně v noci, kdy z blátěných stěn a slaměných střech domů vylézají krev sající „líbající brouci“. Jejich polibek je často mou jízdenkou do lidských těl. Ačkoliv se mi do nich daří pronikat třeba i při transfuzi nebo kojení. Mé oběti o mně nemusí vědět ani celá léta, odhalit mne nejde jen tak. Nejdříve se vyznačuji mírností, projevuji se jako jiné nemoci, třeba horečkami, únavou, bolestmi, zvracením. Pokud se rozhodnu zabydlet natrvalo, usídlím se v nervovém systému, trávicím traktu a navždy poškozuji srdce… Porazit mě může jen málo léků a ještě je na mě musíte vytáhnout brzy. Hnízdím v nejméně šesti milionech lidí, ročně zabiju na osm tisíc z nich. Útočím takřka výlučně v Latinské Americe, ačkoliv mí hostitelé mne mohou převézt kamkoliv. Není to báječné?"
         />
         <Disease
@@ -50,7 +50,6 @@ export default class Index extends React.Component {
         />
         <About />
         <FAQ />
-        <Footer />
       </div>
     );
   }
