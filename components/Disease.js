@@ -16,10 +16,7 @@ export default class Disease extends React.Component {
               (isVisible ? "section--visible" : "section--invisible")
             }
           >
-            <div className="section__left">
-              {/* <img src={"/static/img/img-" + this.props.name + ".jpg"} /> */}
-            </div>
-            <div className="section__right">
+            <div className="section__content">
               <div className="container container--narrow">
                 <h2>{this.props.title}</h2>
                 <p>{this.props.description}</p>

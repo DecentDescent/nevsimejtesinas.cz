@@ -122,39 +122,6 @@ p {
     padding: 65px 0;
   }
 
-  .section__left {
-    display: flex;
-    width: 50%;
-    min-height: 100vh;
-    height: auto;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    text-align: center;
-    box-sizing: border-box;
-  }
-
-  .section__right {
-    padding: 10px 20px;
-    box-sizing: border-box;
-    min-height: 100vh;
-    height: auto;
-    width: 50%;
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-
-  @media (max-width: 750px) {
-    .section__left {
-      display: none;
-    }
-
-    .section__right {
-      width: 100%;
-      background-color: rgba(255, 255, 255, 0);
-      border-radius: 0;
-    }
-  }
-
   &.section--inverted {
     background-color: #111;
     color: $color-white;
@@ -169,23 +136,30 @@ p {
   }
 
   &.section--disease {
-    padding: 0;
-    .section__left {
-      height: auto;
-      min-height: auto;
+    padding: 68px 40px;
+
+    .section__content {
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 10px;
     }
-    .section__right {
-      padding: 68px 0;
-      height: unset;
-      min-height: auto;
+
+    @media (max-width: 750px) {
+      padding: 68px 20px;
+
+      .section__content {
+        background-color: rgba(255, 255, 255, 0);
+      }
     }
     &:nth-of-type(odd) {
-      flex-direction: row;
+      justify-content: flex-end;
+      @media (max-width: 750px) {
+        justify-content: center;
+      }
     }
     &:nth-of-type(even) {
-      flex-direction: row-reverse;
-      .section__left {
-        align-items: flex-end;
+      justify-content: flex-start;
+      @media (max-width: 750px) {
+        justify-content: center;
       }
     }
   }
@@ -472,30 +446,45 @@ svg.msflogo {
   }
 }
 
+#kala-azar,
+#chagasova-choroba,
+#hadi-ustknuti,
+#tuberkuloza,
+#spava-nemoc {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+#kala-azar {
+  background-image: url("/static/img/img-kala-azar.jpg");
+}
+#chagasova-choroba {
+  background-image: url("/static/img/img-chagasova-choroba.jpg");
+}
+#hadi-ustknuti {
+  background-image: url("/static/img/img-hadi-ustknuti.jpg");
+}
+#tuberkuloza {
+  background-image: url("/static/img/img-tuberkuloza.jpg");
+}
+#spava-nemoc {
+  background-image: url("/static/img/img-spava-nemoc.jpg");
+}
 @media (max-width: 750px) {
-  #kala-azar,
-  #chagasova-choroba,
-  #hadi-ustknuti,
-  #tuberkuloza,
-  #spava-nemoc {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
   #kala-azar {
-    background-image: url("/static/img/img-kala-azar-m.jpg");
+    background-image: url("/static/img/mobile-bg/img-kala-azar-m.jpg");
   }
   #chagasova-choroba {
-    background-image: url("/static/img/img-chagasova-choroba-m.jpg");
+    background-image: url("/static/img/mobile-bg/img-chagasova-choroba-m.jpg");
   }
   #hadi-ustknuti {
-    background-image: url("/static/img/img-hadi-ustknuti-m.jpg");
+    background-image: url("/static/img/mobile-bg/img-hadi-ustknuti-m.jpg");
   }
   #tuberkuloza {
-    background-image: url("/static/img/img-tuberkuloza-m.jpg");
+    background-image: url("/static/img/mobile-bg/img-tuberkuloza-m.jpg");
   }
   #spava-nemoc {
-    background-image: url("/static/img/img-spava-nemoc-m.jpg");
+    background-image: url("/static/img/mobile-bg/img-spava-nemoc-m.jpg");
   }
 }
 
