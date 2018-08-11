@@ -1,6 +1,5 @@
 import "../styles/styles.scss";
 import Head from "../components/Head";
-import Body from "../components/Body";
 import Header from "../components/Header";
 import Disease from "../components/Disease";
 import Link from "next/link";
@@ -11,7 +10,6 @@ export default class extends SmartPage {
     const { myUrl } = this.props;
     return (
       <div>
-        <Body />
         <Head
           title="Kala Azar - Nevšímejte si nás! Kala Azar a spol. - Lékaři bez hranic"
           description="Říkají mi „černá horečka“, což v hindštině znamená ono tajemné kala azar. Ale pozor, geograficky nepatřím mezi vybíravé. Najdete mne ve více než sedmdesáti zemích, nejraději mám Indii, Bangladéš, Etiopii či Brazílii. Ročně mí služebníci – muchničky – nakazí statisíce lidí leishmaniózou."
