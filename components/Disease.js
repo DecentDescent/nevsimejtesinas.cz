@@ -1,7 +1,6 @@
 export default class Disease extends React.Component {
   render() {
     var VisibilitySensor = require("react-visibility-sensor");
-
     return (
       <VisibilitySensor
         partialVisibility={true}

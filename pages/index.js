@@ -1,5 +1,4 @@
 import "../styles/styles.scss";
-import { FullPage, Slide } from "react-full-page";
 import Head from "../components/Head";
 import Preloader from "../components/Preloader";
 import Header from "../components/Header";
@@ -19,6 +18,7 @@ export default class Index extends React.Component {
     this.state = { shareModalTitle: undefined };
     this.onShareClick = this.onShareClick.bind(this);
     this.onShareModalClose = this.onShareModalClose.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
   toggleModal() {
@@ -41,6 +41,31 @@ export default class Index extends React.Component {
       shareModalOpened: false
     }));
     document.body.classList.remove("modal--active");
+  }
+  handleScroll() {
+    var header = document.getElementById("header");
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var darkElement1 = document.getElementById("nevsimejte-si-nas");
+    var darkElement2 = document.getElementById("casto-kladene-dotazy");
+    var darkElement1Height = parseInt(darkElement1.offsetHeight);
+    var darkElement1Offset = parseInt(darkElement1.offsetTop);
+    var darkElement2Height = parseInt(darkElement2.offsetHeight);
+    var darkElement2Offset = parseInt(darkElement2.offsetTop);
+    if (
+      (scrollTop >= darkElement1Height - 68 &&
+        scrollTop < darkElement1Offset + darkElement1Height - 200) ||
+      (scrollTop >= darkElement2Offset - 68 &&
+        scrollTop < darkElement2Offset + darkElement2Height - 200)
+    ) {
+      header.classList.add("header--dark");
+    } else {
+      header.classList.remove("header--dark");
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+    this.handleScroll();
   }
 
   render() {

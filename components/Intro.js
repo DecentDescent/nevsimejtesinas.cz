@@ -1,10 +1,6 @@
 export default class About extends React.Component {
   render() {
     var VisibilitySensor = require("react-visibility-sensor");
-
-    var onChange = function(isVisible) {
-      const visibility = isVisible ? "visible" : "hidden";
-    };
     return (
       <VisibilitySensor
         partialVisibility={true}
