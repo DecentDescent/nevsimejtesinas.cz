@@ -16,6 +16,9 @@ export default class extends SmartPage {
           ogTitle="Tuberkulóza - Nevšímejte si nás! Kala Azar a spol. - Lékaři bez hranic"
           ogDescription="Oficiálně možná nepatřím do spolku opomíjených nemocí, ale místo zde mi upřít nelze. Svět na mě skoro zapomněl, už ho neděsím jako dřív. Myslí si o mně, že jsem chorobou minulosti. Víc by se však mýlit nemohli. Jsem nejsmrtelnější infekcí na světě. V počtu obětí předčím HIV/AIDS. Ročně rozevřu náruč deseti milionům lidí, skoro dva miliony pošlu na onen svět."
           ogImage={myUrl + "/static/img/og/tuberkuloza.jpg"}
+          twitterCard="summary"
+          twitterSite="@msf_czech"
+          twitterCreator="@msf_czech"
         />
         <Header />
         <Disease

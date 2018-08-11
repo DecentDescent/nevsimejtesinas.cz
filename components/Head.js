@@ -27,7 +27,9 @@ export default ({ title, description, ogImage }) => (
         "V naší temné říši žije půl druhé miliardy lidí. Vládneme jím a nikdo se nám do toho moc neplete. Tedy… Skoro nikdo. Najdou se záškodníci, jako třeba Lékaři bez hranic, ale sami na nás nestačí. Říkají nám opomíjené choroby. Protože svět skoro nezajímáme. Nejvíce se nám daří v chudých oblastech, kde naši hostitelé nemají peníze na léky. Na některé z nás ani efektivní medicína neexistuje, farmaceutické firmy by nevydělaly. Naši nepřátelé mají v rukách slabé zbraně – často zastaralé léky objevené před desítkami let. Co na to říct? Jen tak dál. Nevšímejte si nás. Nám to vyhovuje…"
       }
     />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@msf_czech" />
+    <meta name="twitter:creator" content="@msf_czech" />
     <meta name="og:url" content="https://www.lekari-bez-hranic.cz" />
     <meta name="og:image" content={ogImage || "/static/img/og/og-main.jpg"} />
     <link

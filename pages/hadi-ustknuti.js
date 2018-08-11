@@ -16,6 +16,9 @@ export default class extends SmartPage {
           ogTitle="Hadí uštknutí - Nevšímejte si nás! Kala Azar a spol. - Lékaři bez hranic"
           ogDescription="Až donedávna jsem bylo tak opomíjené, že jsem nebylo ani na seznamu opomíjených nemocí Světové zdravotnické organizace (WHO). Mí vyslanci – hadi – přitom uštknou pět milionů lidí ročně. Podlehne mi přes sto tisíc z nich, dalších čtyři sta tisíc zanechám zmrzačených (někdy jim musí amputovat třeba nohu)."
           ogImage={myUrl + "/static/img/og/hadi-ustknuti.jpg"}
+          twitterCard="summary"
+          twitterSite="@msf_czech"
+          twitterCreator="@msf_czech"
         />
         <Header type="single-page" />
         <Disease

@@ -17,6 +17,9 @@ export default class extends SmartPage {
           ogTitle="Chagasova choroba - Nevšímejte si nás! Kala Azar a spol. - Lékaři bez hranic"
           ogDescription="Můj čas přichází hlavně v noci, kdy z blátěných stěn a slaměných střech domů vylézají krev sající „líbající brouci“. Jejich polibek je často mou jízdenkou do lidských těl. Ačkoliv se mi do nich daří pronikat třeba i při transfuzi nebo kojení. Mé oběti o mně nemusí vědět ani celá léta, odhalit mne nejde jen tak."
           ogImage={myUrl + "/static/img/og/chagasova-choroba.jpg"}
+          twitterCard="summary"
+          twitterSite="@msf_czech"
+          twitterCreator="@msf_czech"
         />
         <Header />
         <Preloader />

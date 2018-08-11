@@ -16,6 +16,9 @@ export default class extends SmartPage {
           ogTitle="Kala Azar - Nevšímejte si nás! Kala Azar a spol. - Lékaři bez hranic"
           ogDescription="Říkají mi „černá horečka“, což v hindštině znamená ono tajemné kala azar. Ale pozor, geograficky nepatřím mezi vybíravé. Najdete mne ve více než sedmdesáti zemích, nejraději mám Indii, Bangladéš, Etiopii či Brazílii. Ročně mí služebníci – muchničky – nakazí statisíce lidí leishmaniózou."
           ogImage={myUrl + "/static/img/og/kala-azar.jpg"}
+          twitterCard="summary"
+          twitterSite="@msf_czech"
+          twitterCreator="@msf_czech"
         />
         <Header />
         <Disease

@@ -16,6 +16,9 @@ export default class extends SmartPage {
           ogTitle="Spavá nemoc - Nevšímejte si nás! Kala Azar a spol. - Lékaři bez hranic"
           ogDescription="Můj rajón je zejména v subsaharské Africe, hlavně D. R. Kongo je mé oblíbené. Do lidí pronikám díky mouchám tse-tse. Zprvu se mne lze poměrně snadno zbavit, ale odhalit mne není jednoduché. Jsem nenápadná a projevuji se podobně jako třeba malárie – horečkou, bolestí hlavy, slabostí, či bolením kloubů."
           ogImage={myUrl + "/static/img/og/spava-nemoc.jpg"}
+          twitterCard="summary"
+          twitterSite="@msf_czech"
+          twitterCreator="@msf_czech"
         />
         <Header />
         <Disease
