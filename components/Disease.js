@@ -1,6 +1,7 @@
 export default class Disease extends React.Component {
   render() {
     var VisibilitySensor = require("react-visibility-sensor");
+
     return (
       <VisibilitySensor
         partialVisibility={true}
@@ -12,6 +13,10 @@ export default class Disease extends React.Component {
             className={
               "section section--disease" +
               " " +
+              this.props.singlePage +
+              " section--" +
+              this.props.direction +
+              " " +
               (isVisible ? "section--visible" : "section--invisible")
             }
           >
@@ -22,7 +27,7 @@ export default class Disease extends React.Component {
               </div>
               <div className="container container--narrow container--btn">
                 <a
-                  className="btn"
+                  className="btn btn--share"
                   onClick={() =>
                     this.props.onShareClick(
                       this.props.name,
@@ -31,6 +36,9 @@ export default class Disease extends React.Component {
                   }
                 >
                   Oslabit Nemoc
+                </a>{" "}
+                <a className="btn btn--back" href="/index">
+                  Zpět na hlavní stránku
                 </a>
               </div>
             </div>{" "}

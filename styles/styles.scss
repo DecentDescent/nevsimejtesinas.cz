@@ -89,6 +89,23 @@ p {
   }
 }
 
+.is-single-page {
+  .btn.btn--share {
+    display: none;
+  }
+  .btn.btn--back {
+    display: inline-block;
+  }
+}
+.not-single-page {
+  .btn.btn--share {
+    display: inline-block;
+  }
+  .btn.btn--back {
+    display: none;
+  }
+}
+
 .container {
   max-width: 70ch;
   padding: 15px 30px;
@@ -137,7 +154,6 @@ p {
 
   &.section--disease {
     padding: 68px 40px;
-
     .section__content {
       background-color: rgba(255, 255, 255, 0.5);
       border-radius: 10px;
@@ -150,13 +166,13 @@ p {
         background-color: rgba(255, 255, 255, 0);
       }
     }
-    &:nth-of-type(odd) {
+    &.section--ltr {
       justify-content: flex-end;
       @media (max-width: 750px) {
         justify-content: center;
       }
     }
-    &:nth-of-type(even) {
+    &.section--rtl {
       justify-content: flex-start;
       @media (max-width: 750px) {
         justify-content: center;
