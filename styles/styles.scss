@@ -14,6 +14,15 @@ $color-brand: #ee0000;
   font-weight: 700;
 }
 
+*::-moz-selection { /* Code for Firefox */
+  color:$color-white;
+  background: $color-brand;
+}
+
+*::selection {
+  color:$color-white;
+  background: $color-brand;
+}
 body {
   margin: 0;
   font-family: "NudistaFont";
