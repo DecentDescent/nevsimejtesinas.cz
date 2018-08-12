@@ -45,20 +45,29 @@ export default class Index extends React.Component {
   handleScroll() {
     var header = document.getElementById("header");
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    var heroElement = document.getElementById("hero");
     var darkElement1 = document.getElementById("nevsimejte-si-nas");
     var darkElement2 = document.getElementById("casto-kladene-dotazy");
-    var darkElement1Height = parseInt(darkElement1.offsetHeight);
+    var heroElementHeight = parseInt(heroElement.clientHeight);
+    var darkElement1Height = parseInt(darkElement1.clientHeight);
     var darkElement1Offset = parseInt(darkElement1.offsetTop);
-    var darkElement2Height = parseInt(darkElement2.offsetHeight);
+    var darkElement2Height = parseInt(darkElement2.clientHeight);
     var darkElement2Offset = parseInt(darkElement2.offsetTop);
+
     if (
-      (scrollTop >= darkElement1Height - 68 &&
-        scrollTop < darkElement1Offset + darkElement1Height - 200) ||
-      (scrollTop >= darkElement2Offset - 68 &&
-        scrollTop < darkElement2Offset + darkElement2Height - 200)
+      (scrollTop >= darkElement1Offset - 64 &&
+        scrollTop < darkElement1Offset + darkElement1Height) ||
+      (scrollTop >= darkElement2Offset - 64 &&
+        scrollTop < darkElement2Offset + darkElement2Height)
     ) {
+      header.classList.remove("header--light");
       header.classList.add("header--dark");
+    } else if (scrollTop === 0) {
+      header.classList.remove("header--light");
+      header.classList.remove("header--dark");
     } else {
+      header.classList.add("header--light");
       header.classList.remove("header--dark");
     }
   }
