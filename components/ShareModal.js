@@ -24,7 +24,7 @@ export default class ShareModal extends React.Component {
                 href={
                   "http://twitter.com/share?text=Varujte před " +
                   this.props.title +
-                  "&url=https://nevsimejtesinascz.now.sh/" +
+                  "&url=https://nevsimejtesinas.cz/" +
                   this.props.name
                 }
                 className="sharing-tw"
@@ -38,7 +38,7 @@ export default class ShareModal extends React.Component {
               </a>
               <a
                 href={
-                  "https://www.facebook.com/sharer/sharer.php?u=https://nevsimejtesinascz.now.sh/" +
+                  "https://www.facebook.com/sharer/sharer.php?u=https://nevsimejtesinas.cz/" +
                   this.props.name
                 }
                 className="sharing-fb"

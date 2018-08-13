@@ -41,7 +41,10 @@ h2 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 28px;
+  font-size: 32px;
+  @media (max-width: 1200px) {
+    font-size: 28px;
+  }
   @media (max-width: 750px) {
     font-size: 24px;
   }
@@ -50,18 +53,23 @@ h2 {
 h3 {
   font-weight: 700;
   letter-spacing: 1px;
-  font-size: 18px;
+  font-size: 21px;
   line-height: 1.3;
+  @media (max-width: 1200px) {
+    font-size: 18px;
+  }
   @media (max-width: 750px) {
-    font-size: 16px;
+    font-size: 17px;
   }
 }
 
 p {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  @media (max-width: 1200px) {
+    font-size: 16px;
+  }
   @media (max-width: 750px) {
     font-size: 15px;
   }
@@ -113,7 +121,7 @@ p {
   margin: 0 auto;
 
   &.container--btn {
-    padding: 10px 30px;
+    padding: 0 30px 30px 30px;
   }
   &.container--narrow {
     max-width: 50ch;
@@ -154,20 +162,34 @@ p {
   &.section--disease {
     padding: 68px 40px;
     .section__content {
+      width: 50%;
       background-color: rgba(255, 255, 255, 0.5);
       border-radius: 10px;
+      padding-bottom: 20px;
+    }
+    .section__image {
+      text-align: center;
+      width: 50%;
       img {
-        display: none;
+        height: 100vh;
+        width: auto;
       }
     }
 
     @media (max-width: 750px) {
       padding: 68px 20px;
-      img {
-        display: block;
-      }
+      flex-direction: column;
       .section__content {
         background-color: rgba(255, 255, 255, 0);
+        width: 100%;
+      }
+      .section__image {
+        width: 100%;
+        img {
+          width: 100%;
+          max-width: 400px;
+          height: auto;
+        }
       }
     }
     &.section--ltr {
@@ -478,7 +500,7 @@ svg .text {
   }
   .hero__background {
     position: absolute;
-    background-image: url("/static/img/bg-hero.jpg");
+    background-image: url("/static/img/bg/bg-hero.jpg");
     background-position: right center;
     background-size: cover;
     width: 100%;
@@ -550,22 +572,39 @@ svg .text {
   background-repeat: no-repeat;
 }
 #kala-azar {
-  background-image: url("/static/img/img-kala-azar.jpg");
-  background-position: center 68px;
+  background-image: url("/static/img/bg/img-kala-azar-bg.jpg");
+  background-position: left center;
+  @media (max-width: 1200px) {
+    background-position: center center;
+  }
 }
 #chagasova-choroba {
-  background-image: url("/static/img/img-chagasova-choroba.jpg");
+  background-image: url("/static/img/bg/img-chagasova-choroba-bg.jpg");
+  background-position: right center;
+  @media (max-width: 1200px) {
+    background-position: center center;
+  }
 }
 #hadi-ustknuti {
-  background-image: url("/static/img/img-hadi-ustknuti.jpg");
-  background-position: center 68px;
+  background-image: url("/static/img/bg/img-hadi-ustknuti-bg.jpg");
+  background-position: left center;
+  @media (max-width: 1200px) {
+    background-position: center center;
+  }
 }
 #tuberkuloza {
-  background-image: url("/static/img/img-tuberkuloza.jpg");
+  background-image: url("/static/img/bg/img-tuberkuloza-bg.jpg");
+  background-position: right center;
+  @media (max-width: 1200px) {
+    background-position: center center;
+  }
 }
 #spava-nemoc {
-  background-image: url("/static/img/img-spava-nemoc.jpg");
-  background-position: center 68px;
+  background-image: url("/static/img/bg/img-spava-nemoc-bg.jpg");
+  background-position: right center;
+  @media (max-width: 1200px) {
+    background-position: center center;
+  }
 }
 
 #casto-kladene-dotazy {
