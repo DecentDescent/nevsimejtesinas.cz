@@ -62,7 +62,7 @@ export default class Header extends React.Component {
           }
         >
           <div className="header__logo">
-            <a href="http://www.lekaribezhranic.cz" target="_blank">
+            <a href="/index">
               <svg
                 className="msflogo"
                 xmlns="http://www.w3.org/2000/svg"

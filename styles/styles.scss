@@ -14,13 +14,14 @@ $color-brand: #ee0000;
   font-weight: 700;
 }
 
-*::-moz-selection { /* Code for Firefox */
-  color:$color-white;
+*::-moz-selection {
+  /* Code for Firefox */
+  color: $color-white;
   background: $color-brand;
 }
 
 *::selection {
-  color:$color-white;
+  color: $color-white;
   background: $color-brand;
 }
 body {
@@ -69,10 +70,10 @@ p {
 // BUTTONS
 .btn {
   padding: 10px 15px;
-  border: 2px solid #dcdcdc;
-  background: #dcdcdc;
+  background: $color-brand;
+  border: 2px solid $color-brand;
+  color: $color-white;
   letter-spacing: 1.5px;
-  color: $color-text;
   border-radius: 3px;
   text-decoration: none;
   text-transform: uppercase;
@@ -81,20 +82,9 @@ p {
   cursor: pointer;
 
   &:hover {
-    background: $color-brand;
-    border: 2px solid $color-brand;
-    color: $color-white;
-  }
-
-  &.btn--inverted {
-    background: $color-brand;
-    border: 2px solid $color-brand;
-    color: $color-white;
-    &:hover {
-      border: 2px solid #dcdcdc;
-      background: #dcdcdc;
-      color: $color-text;
-    }
+    border: 2px solid #dcdcdc;
+    background: #dcdcdc;
+    color: $color-text;
   }
 }
 

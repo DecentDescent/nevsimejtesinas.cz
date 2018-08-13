@@ -234,7 +234,7 @@ export default class FAQ extends React.Component {
                 <a
                   href="https://darujte.lekari-bez-hranic.cz/osoba/vyse-daru/0?_ga=2.180922595.514679042.1533986827-1440885372.1533497215&_gac=1.247260848.1533501640.EAIaIQobChMIoJjx3eLW3AIVQeaaCh35qwWqEAAYASAAEgIF-vD_BwE"
                   target="_blank"
-                  className="btn btn--inverted"
+                  className="btn"
                 >
                   Chci Darovat
                 </a>
