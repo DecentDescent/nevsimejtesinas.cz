@@ -22,7 +22,9 @@ export default class Disease extends React.Component {
           >
             <div className="section__content">
               <div className="container container--narrow">
-              <img src={"/_next/static/img/mobile/" + this.props.name + ".jpg"}
+                <img
+                  src={"/_next/static/img/mobile/" + this.props.name + ".jpg"}
+                />
                 <h2>{this.props.title}</h2>
                 <p>{this.props.description}</p>
               </div>
