@@ -10,7 +10,6 @@ export default class Header extends React.Component {
     this.closeAll = this.closeAll.bind(this);
     this.keyHandling = this.keyHandling.bind(this);
   }
-
   openNavigation() {
     this.setState(() => ({
       isNavOn: true,

@@ -562,23 +562,6 @@ svg .text {
   background-image: url("/static/img/img-spava-nemoc.jpg");
   background-position: center 68px;
 }
-@media (max-width: 750px) {
-  #kala-azar {
-    background-image: url("/static/img/mobile-bg/img-kala-azar-m.jpg");
-  }
-  #chagasova-choroba {
-    background-image: url("/static/img/mobile-bg/img-chagasova-choroba-m.jpg");
-  }
-  #hadi-ustknuti {
-    background-image: url("/static/img/mobile-bg/img-hadi-ustknuti-m.jpg");
-  }
-  #tuberkuloza {
-    background-image: url("/static/img/mobile-bg/img-tuberkuloza-m.jpg");
-  }
-  #spava-nemoc {
-    background-image: url("/static/img/mobile-bg/img-spava-nemoc-m.jpg");
-  }
-}
 
 #casto-kladene-dotazy {
   flex-direction: column;
