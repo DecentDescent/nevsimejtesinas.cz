@@ -8,6 +8,7 @@ import Disease from "../components/Disease";
 import About from "../components/About";
 import FAQ from "../components/FAQ";
 import ShareModal from "../components/ShareModal";
+import ReactGA from "react-ga";
 
 export default class Index extends React.Component {
   constructor(onShareClick) {
@@ -75,6 +76,9 @@ export default class Index extends React.Component {
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
     this.handleScroll();
+
+    ReactGA.initialize("UA-50377630-2");
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
   render() {
