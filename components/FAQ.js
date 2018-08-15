@@ -189,7 +189,7 @@ export default class FAQ extends React.Component {
               <ul>
                 <li>
                   <a
-                    href="https://www.lekari-bez-hranic.cz/en/node/1776"
+                    href="https://www.lekari-bez-hranic.cz/kala-azar"
                     target="_blank"
                   >
                     Kala Azar
@@ -213,7 +213,7 @@ export default class FAQ extends React.Component {
                 </li>
                 <li>
                   <a
-                    href="https://www.google.com/url?q=https://www.lekari-bez-hranic.cz/sk/node/1789&source=gmail&ust=1534023940687000&usg=AFQjCNHnn3b7uvJ4mmYlPJV7sfK48Nt7ww"
+                    href="https://www.lekari-bez-hranic.cz/tuberkuloza"
                     target="_blank"
                   >
                     Tuberkulóza
