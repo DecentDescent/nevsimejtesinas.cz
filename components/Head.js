@@ -65,8 +65,9 @@ export default ({ title, description, ogImage }) => (
     <link rel="stylesheet" href="/_next/static/style.css" />
     <script
       dangerouslySetInnerHTML={{
-        __html: `
-    var seznam_retargeting_id = 51769;`
+        __html: `/* <![CDATA[ */
+          var seznam_retargeting_id = 51769;
+          /* ]]> */`
       }}
     />
 

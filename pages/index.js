@@ -99,6 +99,16 @@ export default class Index extends React.Component {
       <div>
         <Head />
         <Preloader />
+        <ShareModal
+          onShareModalClose={this.onShareModalClose}
+          className={
+            this.state.shareModalOpened
+              ? "share-modal share-modal--opened"
+              : "share-modal"
+          }
+          title={this.state.shareModalTitle}
+          name={this.state.shareModalName}
+        />
         <Header />
         <Hero />
         <Intro />
@@ -149,16 +159,6 @@ export default class Index extends React.Component {
         />
         <About />
         <FAQ />
-        <ShareModal
-          onShareModalClose={this.onShareModalClose}
-          className={
-            this.state.shareModalOpened
-              ? "share-modal share-modal--opened"
-              : "share-modal"
-          }
-          title={this.state.shareModalTitle}
-          name={this.state.shareModalName}
-        />
       </div>
     );
   }
