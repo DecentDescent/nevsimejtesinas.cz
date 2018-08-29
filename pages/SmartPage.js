@@ -5,9 +5,6 @@ import ReactGA from "react-ga";
 
 export default class extends React.Component {
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-    this.handleScroll();
-
     ReactGA.initialize("UA-50377630-2");
     ReactGA.pageview(window.location.pathname + window.location.search);
     (function(w, d, s, l, i) {
