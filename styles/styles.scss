@@ -886,3 +886,35 @@ svg .text {
     }
   }
 }
+
+.info-modal {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  &.info-modal--opened {
+    display: flex;
+  }
+  .info-modal-content {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    background: #fff;
+    border-radius: 3px;
+    padding: 20px;
+
+    a {
+      margin: 10px 0 20px 0;
+      display: inline-block;
+    }
+  }
+}

@@ -17,7 +17,9 @@ export default class Index extends React.Component {
     this.state = { shareModalOpened: false };
     this.state = { shareModalName: undefined };
     this.state = { shareModalTitle: undefined };
+    this.state = { infoModalOpened: false };
     this.onShareClick = this.onShareClick.bind(this);
+    this.closeInfoModal = this.closeInfoModal.bind(this);
     this.onShareModalClose = this.onShareModalClose.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
   }
@@ -26,6 +28,13 @@ export default class Index extends React.Component {
     this.setState(() => ({
       shareModalOpened: true
     }));
+  }
+
+  closeInfoModal() {
+    this.setState(() => ({
+      infoModalOpened: false
+    }));
+    document.body.classList.remove("modal--active");
   }
 
   onShareClick(name, title) {
@@ -92,6 +101,14 @@ export default class Index extends React.Component {
       j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
       f.parentNode.insertBefore(j, f);
     })(window, document, "script", "dataLayer", "GTM-5DMDW8M");
+
+    var thisURL = location.hash.substr(1);
+    if (thisURL === "notice") {
+      this.setState(() => ({
+        infoModalOpened: true
+      }));
+      document.body.classList.add("modal--active");
+    }
   }
 
   render() {
@@ -159,6 +176,27 @@ export default class Index extends React.Component {
         />
         <About />
         <FAQ />
+        <div
+          className={
+            this.state.infoModalOpened
+              ? "info-modal info-modal--opened"
+              : "info-modal"
+          }
+        >
+          <div className="info-modal-content">
+            <p>
+              Ivan usnul, protože ho ovládla spavá nemoc. Chcete vědět víc? Tady
+              máte příležitost.
+            </p>
+            <p>
+              Musíme vás však varovat. Chystáte se vstoupit do říše démonů.
+              Opomíjených netvorů se kterými už léta bojujeme.
+            </p>
+            <a className="btn btn--share" onClick={this.closeInfoModal}>
+              I přesto chci vstoupit
+            </a>
+          </div>
+        </div>
       </div>
     );
   }
