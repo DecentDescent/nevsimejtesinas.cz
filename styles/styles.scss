@@ -889,26 +889,22 @@ svg .text {
 
 .info-modal {
   width: 100%;
+  height: calc(100vh - 3px);
   box-sizing: border-box;
   padding: 20px;
-  height: 100%;
   top: 0;
   left: 0;
-  z-index: 998;
-  position: fixed;
-  background: rgba(0, 0, 0, 0.8);
-  display: none;
+  background: #000;
   align-items: center;
+  color: #fff;
   justify-content: center;
-  &.info-modal--opened {
-    display: flex;
-  }
+  display: flex;
   .info-modal-content {
     text-align: center;
     width: 100%;
-    max-width: 500px;
     height: auto;
-    background: #fff;
+    box-sizing: border-box;
+    background: #000;
     border-radius: 3px;
     padding: 20px;
 
