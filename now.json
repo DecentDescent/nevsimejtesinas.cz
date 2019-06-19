@@ -1,1 +1,10 @@
-{}
+{
+    "version": 2,
+    "name": "nevsimejtesinas.cz",
+    "builds": [
+        {
+            "src": "next.config.js",
+            "use": "@now/next"
+        }
+    ]
+}

@@ -1,2 +1,5 @@
 const withSass = require("@zeit/next-sass");
-module.exports = withSass();
+const nextConfig = {
+  target: "serverless"
+};
+module.exports = withSass(nextConfig);
