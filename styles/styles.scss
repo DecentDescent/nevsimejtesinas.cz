@@ -89,6 +89,7 @@ p {
   text-decoration: none;
   transition: all 0.3s;
   cursor: pointer;
+  outline: none;
 
   &:hover {
     border: 2px solid #dcdcdc;
