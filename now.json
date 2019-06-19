@@ -1,5 +1,17 @@
 {
     "version": 2,
+    "alias": [
+        "www.nevsimejtesinas.cz"
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "status": 301,
+            "headers": {
+                "Location": "https://nevsimejtesinas.cz/$1"
+            }
+        }
+    ],
     "name": "nevsimejtesinas.cz",
     "builds": [
         {
