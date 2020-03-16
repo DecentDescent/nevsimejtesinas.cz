@@ -62,6 +62,5 @@ export default ({ title, description, ogImage }) => (
       color="#5bbad5"
     />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="/_next/static/style.css" />
   </Head>
 );
