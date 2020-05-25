@@ -1,22 +1,11 @@
 {
-    "version": 2,
-    "alias": [
-        "www.nevsimejtesinas.cz"
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "status": 301,
-            "headers": {
-                "Location": "https://nevsimejtesinas.cz/$1"
-            }
-        }
-    ],
-    "name": "nevsimejtesinas.cz",
-    "builds": [
-        {
-            "src": "next.config.js",
-            "use": "@now/next"
-        }
-    ]
+  "version": 2,
+  "alias": ["www.nevsimejtesinas.cz"],
+  "name": "nevsimejtesinas.cz",
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@now/next"
+    }
+  ]
 }
