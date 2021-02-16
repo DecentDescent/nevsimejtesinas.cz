@@ -88,7 +88,7 @@ export default class Index extends React.Component {
 
     ReactGA.initialize("UA-50377630-2");
     ReactGA.pageview(window.location.pathname + window.location.search);
-    (function(w, d, s, l, i) {
+    (function (w, d, s, l, i) {
       w[l] = w[l] || [];
       w[l].push({
         "gtm.start": new Date().getTime(),
@@ -169,7 +169,7 @@ export default class Index extends React.Component {
           name="spava-nemoc"
           title="Spavá nemoc"
           copyTitle="Spavou nemocí"
-          description="Můj rajón je zejména v subsaharské Africe, hlavně D. R. Kongo je mé oblíbené. Do lidí pronikám díky mouchám tse-tse. Zprvu se mne lze poměrně snadno zbavit, ale odhalit mne není jednoduché. Jsem nenápadná a projevuji se podobně jako třeba malárie – horečkou, bolestí hlavy, slabostí, či bolením kloubů. Aby měli lékaři jistotu, musí mým hostitelům provést bolestivou lumbální punkci a vyšetřit mozkomíšní mok. Později jsem to už celá já, napadám centrální nervový systém a mé oběti nemohou v noci spát, spánek je přemáhá ve dne. Ale to už se zase hůře léčím. A pokud mne nechají být, zabíjím. Musím však přiznat: slábnu. Lidé si na mne dávají větší pozor, vniknu do několika tisíc z nich ročně. Ba co víc, před lety na mne vymysleli účinnější léčbu. Je jednodušší a účinná. A když ji koncem roku 2018 schválilo cosi, co se jmenuje Evropská léková agentura, dostala jsem opravdu strach, že se blíží můj konec."
+          description="Můj rajón je zejména v subsaharské Africe, hlavně D. R. Kongo je mé oblíbené. Do lidí pronikám díky mouchám tse-tse. Zprvu se mne lze poměrně snadno zbavit, ale odhalit mne není jednoduché. Jsem nenápadná a projevuji se podobně jako třeba malárie – horečkou, bolestí hlavy, slabostí, či bolením kloubů. Aby měli lékaři jistotu, musí mým hostitelům provést bolestivou lumbální punkci a vyšetřit mozkomíšní mok. Později jsem to už celá já, napadám centrální nervový systém a mé oběti nemohou v noci spát, spánek je přemáhá ve dne. Ale to už se zase hůře léčím. A pokud mne nechají být, zabíjím. Musím však přiznat: slábnu. Lidé si na mne dávají větší pozor, vniknu do asi tisícovky z nich ročně. Ba co víc, před lety na mne vymysleli účinnější léčbu. Je jednodušší a účinná. A když ji koncem roku 2018 schválilo cosi, co se jmenuje Evropská léková agentura, dostala jsem opravdu strach, že se blíží můj konec."
           onShareClick={this.onShareClick}
           singlePage="not-single-page"
           direction="ltr"

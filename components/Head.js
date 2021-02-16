@@ -11,7 +11,7 @@ export default ({ title, description, ogImage }) => (
       name="description"
       content={
         description ||
-        "V naší temné říši žije půl druhé miliardy lidí. Vládneme jím a nikdo se nám do toho moc neplete. Tedy… Skoro nikdo. Najdou se záškodníci, jako třeba Lékaři bez hranic, ale sami na nás nestačí. Říkají nám opomíjené choroby. Protože svět skoro nezajímáme. Nejvíce se nám daří v chudých oblastech, kde naši hostitelé nemají peníze na léky. Na některé z nás ani efektivní medicína neexistuje, farmaceutické firmy by nevydělaly. Naši nepřátelé mají v rukách slabé zbraně – často zastaralé léky objevené před desítkami let. Co na to říct? Jen tak dál. Nevšímejte si nás. Nám to vyhovuje…"
+        "V naší temné říši žije více než půl druhé miliardy lidí. Vládneme jím a nikdo se nám do toho moc neplete. Tedy… Skoro nikdo. Najdou se záškodníci, jako třeba Lékaři bez hranic, ale sami na nás nestačí. Říkají nám opomíjené choroby. Protože svět skoro nezajímáme. Nejvíce se nám daří v chudých oblastech, kde naši hostitelé nemají peníze na léky. Na některé z nás ani efektivní medicína neexistuje, farmaceutické firmy by nevydělaly. Naši nepřátelé mají v rukách slabé zbraně – často zastaralé léky objevené před desítkami let. Co na to říct? Jen tak dál. Nevšímejte si nás. Nám to vyhovuje…"
       }
     />
     <meta
@@ -24,7 +24,7 @@ export default ({ title, description, ogImage }) => (
       property="og:description"
       content={
         description ||
-        "V naší temné říši žije půl druhé miliardy lidí. Vládneme jím a nikdo se nám do toho moc neplete. Tedy… Skoro nikdo. Najdou se záškodníci, jako třeba Lékaři bez hranic, ale sami na nás nestačí. Říkají nám opomíjené choroby. Protože svět skoro nezajímáme. Nejvíce se nám daří v chudých oblastech, kde naši hostitelé nemají peníze na léky. Na některé z nás ani efektivní medicína neexistuje, farmaceutické firmy by nevydělaly. Naši nepřátelé mají v rukách slabé zbraně – často zastaralé léky objevené před desítkami let. Co na to říct? Jen tak dál. Nevšímejte si nás. Nám to vyhovuje…"
+        "V naší temné říši žije více než půl druhé miliardy lidí. Vládneme jím a nikdo se nám do toho moc neplete. Tedy… Skoro nikdo. Najdou se záškodníci, jako třeba Lékaři bez hranic, ale sami na nás nestačí. Říkají nám opomíjené choroby. Protože svět skoro nezajímáme. Nejvíce se nám daří v chudých oblastech, kde naši hostitelé nemají peníze na léky. Na některé z nás ani efektivní medicína neexistuje, farmaceutické firmy by nevydělaly. Naši nepřátelé mají v rukách slabé zbraně – často zastaralé léky objevené před desítkami let. Co na to říct? Jen tak dál. Nevšímejte si nás. Nám to vyhovuje…"
       }
     />
     <meta name="twitter:card" content="summary" />

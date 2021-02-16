@@ -17,7 +17,7 @@ export default class About extends React.Component {
             <div className="container">
               <h2>Nevšímejte si nás!</h2>
               <p>
-                V naší temné říši žije půl druhé miliardy lidí. Vládneme jim a
+                V naší temné říši žije více než půl druhé miliardy lidí. Vládneme jim a
                 nikdo se nám do toho moc neplete. Tedy… Skoro nikdo. Najdou se
                 záškodníci, jako třeba Lékaři bez hranic, ale sami na nás
                 nestačí. Říkají nám opomíjené choroby. Protože svět skoro
